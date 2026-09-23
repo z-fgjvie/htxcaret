@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <footer className="bg-[#e6ddd1]">
@@ -9,10 +7,10 @@ export default function Footer() {
           p.m. EST
         </p>
         <div className="flex gap-4">
-          <a href="#" target="_blank">
+          <a href="/aviso-de-privacidad" className="hover:underline">
             Aviso de privacidad
           </a>
-          <a href="#" target="_blank">
+          <a href="/terminos-de-uso" className="hover:underline">
             Términos y condiciones
           </a>
         </div>

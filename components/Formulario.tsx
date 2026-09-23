@@ -11,12 +11,13 @@ export default function Formulario() {
     <section className="py-6 px-4 lg:px-16 lg:py-13">
       <div className="max-w-lg mx-auto">
         <div className="text-right mb-4">
-          <Link
-            href="/"
+          <a
+            href="https://micuenta.hotelxcaret.com/es/registro"
+            target="_blank"
             className="font-semibold hover:text-[#dea035] border-b-2 border-[#dea035] lg:text-base text-sm "
           >
             CREAR CUENTA
-          </Link>
+          </a>
         </div>
         <div className="bg-white px-5 pt-6 pb-12">
           <h2 className="font-timesroman text-2xl text-center text-[#484848] mt-4 mb-7">
