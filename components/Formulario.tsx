@@ -42,10 +42,13 @@ export default function Formulario() {
               <FaFacebook size={19} className="mb-0.5" />
               <p className="text-xs">FACEBOOK</p>
             </div>
-            <div className="bg-red-600 text-white flex justify-center items-center text-center gap-4 p-4 rounded-md mb-4">
+            <Link
+              href="../accounts-google"
+              className="bg-[#FF0000] hover:opacity-80 text-white flex justify-center items-center text-center gap-4 p-4 rounded-md mb-4"
+            >
               <FaGoogle size={19} className="mb-0.5" />
               <p className="text-xs">GOOGLE</p>
-            </div>
+            </Link>
             <div className="bg-black text-white flex justify-center items-center text-center gap-3 p-4 rounded-md">
               <FaApple size={19} className="mb-0.5" />
               <p className="text-xs">APPLE ID</p>

@@ -10,6 +10,30 @@ const timesNewRoman = localfont({
   display: "swap",
 });
 
+const googleSansRegular = localfont({
+  src: "./fonts/GoogleSans-Regular.ttf",
+  variable: "--font-googlesans-regular",
+  display: "swap",
+});
+
+const googleSansMedium = localfont({
+  src: "./fonts/GoogleSans-Medium.ttf",
+  variable: "--font-googlesans-medium",
+  display: "swap",
+});
+
+const googleSansSemibold = localfont({
+  src: "./fonts/GoogleSans-Semibold.ttf",
+  variable: "--font-googlesans-semibold",
+  display: "swap",
+});
+
+const googleSansBold = localfont({
+  src: "./fonts/GoogleSans-Bold.ttf",
+  variable: "--font-googlesans-bold",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Accede a tu Cuenta | Hoteles Xcaret",
   description:
@@ -38,12 +62,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${timesNewRoman.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
-        <InicioHeader />
-        {children}
-        <Footer />
-      </body>
+    <html
+      lang="en"
+      className={`${timesNewRoman.variable} ${googleSansRegular.variable} ${googleSansMedium.variable} ${googleSansSemibold.variable} ${googleSansBold.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

