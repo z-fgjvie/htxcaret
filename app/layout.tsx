@@ -23,7 +23,7 @@ const googleSansMedium = localfont({
 });
 
 const googleSansSemibold = localfont({
-  src: "./fonts/GoogleSans-Semibold.ttf",
+  src: "./fonts/GoogleSans-SemiBold.ttf",
   variable: "--font-googlesans-semibold",
   display: "swap",
 });
