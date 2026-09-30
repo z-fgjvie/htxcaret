@@ -1,7 +1,7 @@
 export default function MensajeError() {
   return (
     <div className="fixed google-regular inset-0 z-50 flex items-center justify-center bg-white px-6">
-      <div className="w-full max-w-[450px] text-center">
+      <div className="w-full max-w-112.5 text-center">
         <div className="mb-6 flex justify-center">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fce8e6]">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
